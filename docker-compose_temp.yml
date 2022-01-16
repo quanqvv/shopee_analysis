@@ -25,5 +25,22 @@ services:
     depends_on:
       - zookeeper
 
+volumes:
+  hadoop_namenode:
+  hadoop_datanode:
+  hadoop_historyserver:
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local
+networks:
+  project3-network:
+    #    name: project3-network
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.25.0.0/16
+#          gateway: 172.25.0.1
 
 
