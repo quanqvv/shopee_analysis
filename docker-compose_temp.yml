@@ -203,7 +203,6 @@ volumes:
     driver: local
 networks:
   project3-network:
-    name: project3-network
     driver: bridge
     ipam:
       driver: default
