@@ -2,15 +2,13 @@ version: "3"
 services:
   zookeeper:
     image: 'bitnami/zookeeper:latest'
+    container_name: zookeeper-container
     ports:
       - '2181:2181'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
     volumes:
       - "zookeeper_data:/bitnami"
-    networks:
-      project3-network:
-        ipv4_address: 172.25.0.7
   # KAFKA
   kafka:
     image: 'bitnami/kafka:latest'
@@ -25,9 +23,6 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     volumes:
       - "kafka_data:/bitnami"
-    networks:
-      project3-network:
-        ipv4_address: 172.25.0.8
     depends_on:
       - zookeeper
 
