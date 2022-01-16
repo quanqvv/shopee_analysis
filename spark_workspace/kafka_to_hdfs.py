@@ -27,7 +27,7 @@ fileStream = messages.writeStream \
     .queryName("Persist the processed data") \
     .outputMode("append") \
     .format("parquet") \
-    .option("path", "hdfs://namenode:9000/user/tuannha/data/") \
-    .option("checkpointLocation", "hdfs://namenode:9000/user/tuannha/checkpoints") \
+    .option("path", "hdfs://172.25.0.2:9000/user/tuannha/data/") \
+    .option("checkpointLocation", "hdfs://172.25.0.2:9000/user/tuannha/checkpoints") \
     .start() \
     .awaitTermination()
