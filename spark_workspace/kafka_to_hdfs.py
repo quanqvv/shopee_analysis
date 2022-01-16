@@ -6,7 +6,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 
 #config kafka server and topic
-KAFKA_BROKER = "kafka-container:9092"
+KAFKA_BROKER = "172.25.0.8:9092"
 KAFKA_TOPIC = "item-shopee"
 
 #Create spark job
