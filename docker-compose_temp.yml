@@ -25,13 +25,5 @@ services:
     depends_on:
       - zookeeper
 
-volumes:
-  hadoop_namenode:
-  hadoop_datanode:
-  hadoop_historyserver:
-  zookeeper_data:
-    driver: local
-  kafka_data:
-    driver: local
 
 
