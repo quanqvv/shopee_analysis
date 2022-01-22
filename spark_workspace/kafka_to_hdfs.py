@@ -10,7 +10,7 @@ KAFKA_BROKER = "172.25.0.8:9092"
 KAFKA_TOPIC = "item-shopee"
 
 #Create spark job
-spark = SparkSession.builder.appName('shopee-streaming-data').master("local").getOrCreate()
+spark = SparkSession.builder.appName('shopee-streaming-data').getOrCreate()
 
 #create stream kafka message
 kafkaMessage = spark.readStream.format("kafka") \
